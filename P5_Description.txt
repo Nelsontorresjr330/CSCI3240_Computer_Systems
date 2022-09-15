@@ -1,0 +1,51 @@
+
+                             Computer Systems
+                                Summer 2022
+                                 Project 5
+
+
+turnin code:  cs_p5
+
+
+Have your main program do this at the start of execution:
+
+    alarm(90);
+    p5siggy();       // linked from our public directory (see below)
+
+The program should then prepare to receive these 2 types of signals:
+    SIGUSR1
+    SIGUSR2
+
+The program should then go into a loop doing this:
+    sleep(1);
+until it has received 6 signals.
+
+On receiving each signal, the program should print:
+    handling SIGxxxx  where xxxx is replaced by the name of the signal
+
+After receiving the 6th signal, the program should terminate.
+
+Your program should link with a function named p5siggy from:
+    /nfshome/rbutler/public/courses/cs/p5siggy.o
+
+
+--------
+
+TURNIN info:
+    You should submit a tar file of a directory which contains all of the
+    required files (makefile, C source files, header files, etc).
+    Sample tar command to create a tar file from a dir:
+        tar cvf p5.tar ./p5dir  ## do *NOT* use full pathname of the dir
+    After un-tarring the project, we will cd to the dir containing it and type:
+        rm -rf p5
+        rm -f *.o
+        make
+    It should build an executable named p5.
+
+    ********
+    The submitted file must:
+        - be a tar file
+        - un-tar into the *correct* set of files (above)
+        - build an executable named p5
+    else it will NOT be graded further.
+    ********
