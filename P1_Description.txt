@@ -1,0 +1,51 @@
+
+                               Computer Systems
+                                 Summer 2022
+                                  Project 1
+
+
+turnin code:  cs_p1
+
+
+Write a C/C++ program that performs the tasks described below.
+
+The program should take the names of 2 files as cmd-line args.
+
+The program should perform a byte-by-byte comparison of the 2 files.
+Stop the comparison at the first byte-location in which the 2 files differ
+and print:
+    location: 0xMM 0xNN
+e.g.:
+    1008: 0x4F 0xA3
+where 1008 is a decimal number representing the distance into the files
+*(relative to 0)* at which the first difference occurs.  And, 0x4F and 0xA3
+are the first two bytes in the files that differ.
+
+If one file is shorter than the other, print EOF as the value for that file.
+The location in that case would be one byte distance beyond the last byte
+actually in the file, e.g.:
+    103: 0xE3 EOF
+
+If the files are identical, print the word IDENTICAL without a location, e.g.:
+    IDENTICAL
+
+--------
+
+TURNIN info:
+    You should submit a tar file of a directory which contains all of the
+    required files (makefile, C source files, header files, etc).
+    Sample tar command to create a tar file from a dir:
+        tar cvf p1.tar ./p1dir  ## do *NOT* use full pathname of the dir
+    After un-tarring the project, I will cd to the dir containing it and type:
+        rm -rf p1
+        rm -f *.o
+        make
+    It should build an executable named p1.
+
+    ********
+    The submitted file must:
+        - be a tar file
+        - un-tar into the *correct* set of files (above)
+        - build an executable named p1
+    else it will NOT be graded further.
+    ********
