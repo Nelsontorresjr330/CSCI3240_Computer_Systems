@@ -1,0 +1,44 @@
+
+                               Computer Systems
+                                 Summer 2022
+                                  Project 3
+
+
+turnin code:  cs_p3
+
+
+Write a C/C++ program that performs the tasks described below.
+
+The program should accept 2 command-line args, each is the name of a file.
+An example execution might be:
+    ./p3 /etc/hosts ./tempin
+
+The program should create 2 pthreads, one to read the first file, and one
+to read the second file.  Each thread should count the number of occurrences
+of the letter 'a' in each file.
+
+The mainline program should wait for the threads to terminate and then print
+the results.  The results would be of this format:
+    123 /etc/hosts
+     44 ./tempin
+
+--------
+
+TURNIN info:
+    You should submit a tar file of a directory which contains all of the
+    required files (makefile, C source files, header files, etc).
+    Sample tar command to create a tar file from a dir:
+        tar cvf p3.tar ./p3dir  ## do *NOT* use full pathname of the dir
+    After un-tarring the project, I will cd to the dir containing it and type:
+        rm -rf p3
+        rm -f *.o
+        make
+    It should build an executable named p3.
+
+    ********
+    The submitted file must:
+        - be a tar file
+        - un-tar into the *correct* set of files (above)
+        - build an executable named p3
+    else it will NOT be graded further.
+    ********
