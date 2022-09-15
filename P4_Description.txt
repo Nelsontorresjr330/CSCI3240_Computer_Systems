@@ -1,0 +1,41 @@
+
+                             Computer Systems
+                                Summer 2022
+                                 Project 4
+
+
+turnin code:  cs_p4
+
+
+Write a C/C++ program that performs the tasks described below.
+
+The program will be given 1-3 cmd-line args, e.g.:
+    ./p4 /bin/date
+    ./p4 /bin/cat /etc/hosts
+    ./p4 /bin/echo  foo  bar
+
+The program should use execve (or your choice from the exec family of
+functions) to exec the program specified as the first argument, and
+provide the last one or two arguments to the program that is exec'd.
+
+
+--------
+
+TURNIN info:
+    You should submit a tar file of a directory which contains all of the
+    required files (makefile, C source files, header files, etc).
+    Sample tar command to create a tar file from a dir:
+        tar cvf p4.tar ./p4dir  ## do *NOT* use full pathname of the dir
+    After un-tarring the project, I will cd to the dir containing it and type:
+        rm -rf p4
+        rm -f *.o
+        make
+    It should build an executable named p4.
+
+    ********
+    The submitted file must:
+        - be a tar file
+        - un-tar into the *correct* set of files (above)
+        - build an executable named p4
+    else it will NOT be graded further.
+    ********
