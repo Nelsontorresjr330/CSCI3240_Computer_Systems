@@ -9,7 +9,7 @@ https://www.mtsu.edu/csc/undergrad_course_desc.php
 ## Projects 
 • Project 1 - Byte by Byte File Comparison
 
-• Prohect 2 - MMAlloc/MAlloc utilization
+• Project 2 - MMAlloc/MAlloc utilization
 
 • Project 3 - Multithreading utilization
 
