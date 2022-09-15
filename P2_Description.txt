@@ -1,0 +1,60 @@
+
+                               Computer Systems
+                                 Summer 2022
+                                  Project 2
+
+
+turnin code:  cs_p2
+
+
+Write a C/C++ program that performs the tasks described below.
+
+The program should provide a function named mm_alloc.
+
+This is the function prototype:
+
+    void *mm_alloc(int num_bytes_to_allocate)
+
+mm_alloc function should obtain space for the user from a block which you
+obtain via mmap.  You should obtain the block on the first invocation
+and the block size should be some number of pages.  The number of pages in
+the block should be obtained from the environment variable named:
+    P2_NUM_PAGES
+
+I will write a set of test programs which invoke your function.
+
+The program must align requests on 16-byte addresses.
+
+If the user attempts to allocate more space than is available, then 
+return NULL.
+
+
+BUILDING AND TESTING:
+    Your program MUST NOT include a main procedure; that will be supplied to
+    you in a source program named p2main.c
+
+    Your makefile should compile both your code and the source program named
+    p2main.c linking them into into a single executable named p2
+
+    I will supply multiple versions of p2main.c and re-build for each one.
+
+--------
+
+TURNIN info:
+    You should submit a tar file of a directory which contains all of the
+    required files (makefile, C source files, header files, etc).
+    Sample tar command to create a tar file from a dir:
+        tar cvf p2.tar ./p2dir  ## do *NOT* use full pathname of the dir
+    After un-tarring the project, I will cd to the dir containing it and type:
+        rm -rf p2
+        rm -f *.o
+        make
+    It should build an executable named p2.
+
+    ********
+    The submitted file must:
+        - be a tar file
+        - un-tar into the *correct* set of files (above)
+        - build an executable named p2
+    else it will NOT be graded further.
+    ********
